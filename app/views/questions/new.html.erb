@@ -1,0 +1,16 @@
+<form action="<%= questions_url %>" method="POST">
+	<%= auth_token %>
+	
+	<label>
+		Title
+		<input type="text" name="question[question_name]" value="<%= @question.question_name %>">
+	</label>
+	<br>
+	<label>
+		Body
+		<textarea name="question[question_body]" value="<%= @question.question_body %>"></textarea>
+	</label>
+	<br>
+	
+	<button>Submit</button>
+</form>

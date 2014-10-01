@@ -38,11 +38,19 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'backbone-on-rails'
+gem 'kaminari'
+gem 'pg_search'
+gem 'faker'
+
 group :development do
-  gem 'rspec-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'quiet_assets'
   gem 'pry-rails'
+end
+
+group :development, :test do 
+  gem 'rspec-rails'
 end
 

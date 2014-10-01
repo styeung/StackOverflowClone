@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
   
   def index
-    @questions = Questions.all
+    @questions = Question.all.order("created_at desc")
     render :index
   end
   
@@ -39,6 +39,6 @@ class QuestionsController < ApplicationController
   end
   
   def question_params
-    params.require(:question).permit(:question_name)
+    params.require(:question).permit(:question_name, :question_body)
   end
 end

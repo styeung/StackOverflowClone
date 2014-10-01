@@ -1,0 +1,8 @@
+<ul>
+<% @questions.each do |question| %>
+	<li>
+		<p>Posted <%= time_ago_in_words(question.created_at) %> ago</p>
+		<a href="<%= question_url(question) %>"><%= question.question_name %></a>
+	</li>
+<% end %>
+</ul>
