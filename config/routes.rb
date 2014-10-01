@@ -3,4 +3,6 @@ Rails.application.routes.draw do
     resources :answers, only: [:create, :destroy]
   end
   
+  root to: "questions#index", as: "root"
+  
 end
