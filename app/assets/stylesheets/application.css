@@ -39,7 +39,7 @@ button, select, option, input, textarea {
 	margin: 0;
 	border: 0;
 	-webkit-appearance: none;
-	background-color: none;
+	background-color: transparent;
 	font-family: inherit;
 }
 
@@ -110,6 +110,7 @@ label {
 .new-question-link {
 	display: inline-block;
 	background-color: #aaa;
+	font-family: arial, sans-serif;
 	font-size: 18px;
 	padding: 5px 10px;
 	color: white;
@@ -135,10 +136,13 @@ label {
 
 /* Index Page styles*/
 
-.index-header {
-	font-size: 20px;
+.title-text {
 	border-bottom: 1px solid #ccc;
 	padding: 5px 0;
+}
+
+.index-title-text {
+	font-size: 20px;
 }
 
 .stats-container {
@@ -193,3 +197,107 @@ label {
 	padding: 10px 0;
 	border-bottom: 1px solid #eee;
 }
+
+/* Show Page Styles*/
+.question-title-text {
+	font-size: 24px;
+}
+
+.answer-title-text {
+	font-size: 20px;
+}
+
+.upvote-sidebar-container {
+	float: left;
+	width: 60px;
+}
+
+.upvote-sidebar-container p {
+	font-size: 26px;
+	color: #666;
+	text-align: center;
+}
+
+.content-container {
+	float: left;
+	width: 660px;
+}
+
+.content-container p {
+	font-size: 14px;
+	font-family: arial, sans-serif;
+	line-height: 1.3;
+}
+
+.show-question-row {
+	padding: 30px 0;
+}
+
+.show-answer-row {
+	border-bottom: 1px solid #ccc;
+	padding: 30px 0;
+}
+
+.upvote-button {
+	color: #999;
+	font-size: 20px;
+	transform:scale(1.4,1);
+	margin-top: -8px;
+	margin-left: 11px;
+}
+
+.upvote-button:hover {
+	color: #666;
+	cursor: pointer;
+}
+
+.answer-textarea {
+	width: 670px;
+	height: 200px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	font-family: arial, sans-serif;
+	line-height: 1.3;
+	margin: auto;
+}
+
+.form-title-text {
+	font-size: 20px;
+	padding: 20px 0;
+}
+
+.submission-button {
+	font-size: 20px;
+	font-weight: 800;
+	font-family: arial, sans-serif;
+	background-color: #333;
+	color: white;
+	padding: 5px 10px;
+	margin: 20px 0;
+}
+
+.submission-button:hover {
+	background-color: #111;
+	cursor: pointer;
+}
+
+.question-title-input {
+	width: 660px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	padding: 2px;
+	line-height: 1.3;
+	font-family: arial, sans-serif;
+}
+
+.question-textarea {
+	width: 660px;
+	height: 200px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+	font-family: arial, sans-serif;
+	line-height: 1.3;
+	padding: 2px;
+	margin: auto;
+}
+

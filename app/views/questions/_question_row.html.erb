@@ -1,11 +1,11 @@
 <li class="question-row group">
 	<div class="stats-container group">
 		<div class="answers-count-container">
-			<p><%= question.answers_count %></p>
+			<p><%= question.answers_count || 0 %></p>
 			<p>Answers</p>
 		</div>
 		<div class="votes-count-container">
-			<p><%= question.maximum_count %></p>
+			<p><%= question.maximum_count || 0 %></p>
 			<p>Votes</p>
 		</div>
 	</div>

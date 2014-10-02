@@ -26,6 +26,8 @@ class QuestionsController < ApplicationController
                   ) AS answers_mod ON answers_mod.question_id = questions.id
                   GROUP BY
                   questions.id
+                  ORDER BY
+                  questions.created_at DESC
                   ")
     
     render :index
