@@ -25,12 +25,13 @@ html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a, option, br, hr {
 }
 
 body {
-	font-family: "HelveticaNeue-Light", Helvetica, Arial, sans-serif;
+/*	font-family: "Consolas", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;*/
+	font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
 }
 
 a {
 	text-decoration: none;
-	color: #0080c6;
+	color: #000;
 }
 
 button, select, option, input, textarea {
@@ -60,9 +61,6 @@ input, textarea{
 	-webkit-user-select: none;
 }
 
-img {
-	display: block;
-}
 
 ul {
 	list-style: none;
@@ -70,4 +68,128 @@ ul {
 
 label {
 	display: block;
+}
+
+/* Clearfix */
+
+.group:after {
+	content: "";
+	display: block;
+	clear:both;
+}
+
+/* Navigation Bar Styles */
+.nav {
+	width: 980px;
+	margin: 20px auto;
+}
+
+.main {
+	width: 980px;
+	margin: auto;
+}
+
+.logo-image {
+	display: inline-block;
+	height: 70px;
+	width: auto;
+	margin-bottom: -8px;
+	margin-left: -12px;
+}
+
+.logo-text {
+	display: inline-block;
+	font-weight: 100;
+	font-size: 32px;
+}
+
+.logo-text strong { 
+	font-weight: 1000;
+}
+
+.new-question-link {
+	display: inline-block;
+	background-color: #aaa;
+	font-size: 18px;
+	padding: 5px 10px;
+	color: white;
+	margin: 30px 0;
+}
+
+.new-question-link:hover {
+	cursor: pointer;
+	background-color: #fdc435;
+}
+
+.left-container {
+	width: 720px;
+	padding: 0 20px 0 0;
+	float: left;
+}
+
+.right-container {
+	width: 220px;
+	padding: 0 10px;
+	float: left;
+}
+
+/* Index Page styles*/
+
+.index-header {
+	font-size: 20px;
+	border-bottom: 1px solid #ccc;
+	padding: 5px 0;
+}
+
+.stats-container {
+	float: left;
+	width: 170px;
+}
+
+.question-container {
+	float: left;
+	width: 550px;
+}
+
+.stats-container p {
+	text-align: center;
+}
+
+.answers-count-container {
+	float: left;
+	width: 85px;
+}
+
+.answers-count-container p {
+	color: #9a4444;
+}
+
+.votes-count-container {
+	float: left;
+	width: 85px;
+}
+
+.votes-count-container p {
+	color: #666;
+}
+
+.question-link {
+	color: #07c;
+	font-weight: 800;
+	font-size: 18px;
+}
+
+.question-link {
+	
+}
+
+.time-ago-text {
+	font-size: 14px;
+	color: #999;
+	text-align: right;
+}
+
+.question-row {
+	padding: 10px 0;
+	border-bottom: 1px solid #eee;
 }
