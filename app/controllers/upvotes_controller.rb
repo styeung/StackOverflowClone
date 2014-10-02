@@ -1,11 +1,12 @@
 class UpvotesController < ApplicationController
   
   def create
-    @answer = Answer.find(params[:answer_id])
-    @upvote = Answer.upvotes.new()
+    @answer = Answer.includes(:upvotes).find(params[:answer_id])
+    @upvote = @answer.upvotes.new()
+    
     
     if @upvote.save
-      render: question_url(@answer.question)
+      render json: @answer.upvotes.length
     else
       flash.now[:errors] = @upvote.errors.full_messages
     end

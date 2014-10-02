@@ -2,6 +2,8 @@
 <% @questions.each do |question| %>
 	<li>
 		<p>Posted <%= time_ago_in_words(question.created_at) %> ago</p>
+		<p><%= question.answers_count %> answers</p>
+		<p><%= question.maximum_count %> upvotes</p>
 		<a href="<%= question_url(question) %>"><%= question.question_name %></a>
 	</li>
 <% end %>

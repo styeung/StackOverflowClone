@@ -1,2 +1,36 @@
 <h2><%= @question.question_name %></h2>
 <p><%= @question.question_body %></p>
+
+<form action="<%= question_answers_url(@question) %>" method="POST">
+	<%= auth_token %>
+	
+	<label>
+		Your Answer
+		<textarea name="answer[answer_text]"></textarea>
+	</label>
+	<br>
+	<button>Submit</button>
+</form>
+
+<h2>Answers</h2>
+<ul>
+	<% @answers.each_with_index do |answer, idx| %>
+		<li>
+			<form action="<%= answer_upvotes_url(answer) %>" method="POST" data-remote="true" class="upvote-button" id="form-<%= idx %>">
+				<%= auth_token %>
+				<button>Upvote</button>
+			</form>
+			<p id="upvote-text-<%= idx %>"><%= answer.upvotes.length %>:</p>
+			<p><%= answer.answer_text %></p>
+		</li>
+	<% end %>
+</ul>
+
+<script>
+	$(document).ready(function() {
+		$("form.upvote-button").on("ajax:success", function(event, data) {
+			var idNum = event.target.id.slice(5);
+			$("#upvote-text-" + idNum).html(data + ":");
+		});
+	});
+</script>
