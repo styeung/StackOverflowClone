@@ -8,13 +8,21 @@
 
 50.times do
   random_name = Faker::Hacker.say_something_smart
-  random_body = Faker::Lorem.paragraph(6)
+  random_body = ""
+  6.times do
+    random_sentence = Faker::Hacker.say_something_smart
+    random_body.concat("#{ random_sentence[0...random_sentence.length - 1] }. ")
+  end
   Question.create({ question_name: "#{random_name[0...random_name.length - 1]}?", question_body: random_body })
 end
 
 (1..50).each do |num|
   3.times do
-    random_answer = Faker::Lorem.paragraph(4)
+    random_answer = ""
+    6.times do
+      random_sentence = Faker::Hacker.say_something_smart
+      random_answer.concat("#{random_sentence[0...random_sentence.length - 1]}. ")
+    end
     Answer.create({ question_id: num, answer_text: random_answer })
   end
 end

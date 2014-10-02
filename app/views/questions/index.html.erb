@@ -2,7 +2,22 @@
 	<h2 class="title-text index-title-text">Recent Questions</h2>
 	<ul>
 		<% @questions.each do |question| %>
-			<%= render "question_row", question: question %>
+			<li class="question-row group">
+				<div class="stats-container group">
+					<div class="answers-count-container">
+						<p><%= question.answers_count || 0 %></p>
+						<p>Answers</p>
+					</div>
+					<div class="votes-count-container">
+						<p><%= question.maximum_count || 0 %></p>
+						<p>Votes</p>
+					</div>
+				</div>
+				<div class="question-container">
+					<a href="<%= question_url(question) %>" class="question-link"><%= question.question_name %></a>
+					<p class="time-ago-text">Posted <%= time_ago_in_words(question.created_at) %> ago</p>
+				</div>
+			</li>
 		<% end %>
 	</ul>
 </div>

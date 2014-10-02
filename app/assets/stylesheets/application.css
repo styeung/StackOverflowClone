@@ -25,7 +25,6 @@ html, body, header, div, ul, li, h1, h2, h3, h4, h5, p, a, option, br, hr {
 }
 
 body {
-/*	font-family: "Consolas", "HelveticaNeue-Light", Helvetica, Arial, sans-serif;*/
 	font-family: Trebuchet MS,Liberation Sans,DejaVu Sans,sans-serif;
 }
 
@@ -78,6 +77,21 @@ label {
 	clear:both;
 }
 
+/* General Layout Styles */
+.left-container {
+	width: 720px;
+	padding: 0 20px 0 0;
+	float: left;
+}
+
+.right-container {
+	width: 220px;
+	padding: 0 10px;
+	float: left;
+}
+
+
+
 /* Navigation Bar Styles */
 .nav {
 	width: 980px;
@@ -122,17 +136,13 @@ label {
 	background-color: #fdc435;
 }
 
-.left-container {
-	width: 720px;
-	padding: 0 20px 0 0;
-	float: left;
+
+/* Error Message Styles */
+.error-messages p{
+	color: red;
 }
 
-.right-container {
-	width: 220px;
-	padding: 0 10px;
-	float: left;
-}
+
 
 /* Index Page styles*/
 
@@ -183,10 +193,6 @@ label {
 	font-size: 18px;
 }
 
-.question-link {
-	
-}
-
 .time-ago-text {
 	font-size: 14px;
 	color: #999;
@@ -197,6 +203,8 @@ label {
 	padding: 10px 0;
 	border-bottom: 1px solid #eee;
 }
+
+
 
 /* Show Page Styles*/
 .question-title-text {
@@ -280,6 +288,9 @@ label {
 	background-color: #111;
 	cursor: pointer;
 }
+
+
+/* New Question Page Styles */
 
 .question-title-input {
 	width: 660px;

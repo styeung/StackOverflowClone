@@ -6,7 +6,8 @@ class AnswersController < ApplicationController
     if @answer.save
       redirect_to question_url(@question)
     else
-      flash.now[:errors] = @answer.errors.full_messages
+      flash[:errors] = @answer.errors.full_messages
+      redirect_to question_url(@question)
     end
   end
   
@@ -18,6 +19,7 @@ class AnswersController < ApplicationController
       redirect_to question_url(@question)
     else
       flash.now[:errors] = @answer.errors.full_messages
+      render "questions/new"
     end
   end
   

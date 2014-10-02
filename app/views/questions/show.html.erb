@@ -33,15 +33,16 @@
 		</ul>
 		
 		
-		<div class="content-container">
-	<form action="<%= question_answers_url(@question) %>" method="POST">
-		<%= auth_token %>
+	<div class="content-container">
+		<form action="<%= question_answers_url(@question) %>" method="POST">
+			<%= auth_token %>
 	
-		<h2 class="form-title-text">Your Answer</h2>
-		<textarea name="answer[answer_text]" class="answer-textarea"></textarea>
-		<br>
-		<button class="submission-button">Post Your Answer</button>
-	</form>
+			<h2 class="form-title-text">Your Answer</h2>
+			<textarea name="answer[answer_text]" class="answer-textarea"></textarea>
+			<br>
+			<button class="submission-button">Post Your Answer</button>
+		</form>
+	</div>
 	
 </div>
 

@@ -1,13 +1,6 @@
 class QuestionsController < ApplicationController
   
-  def index
-    # @questions = Question.select("questions.*, count(*) AS answers_count")
-#                          .joins(answers: :upvotes)
-#                          .group("questions.id")
-#                          .all
-#                          .order(created_at: :desc)
-    
-    
+  def index 
     @questions = Question.find_by_sql("
                   SELECT
                   questions.*, COUNT(*) AS answers_count, MAX(answers_mod.upvotes_count) AS maximum_count
@@ -43,9 +36,10 @@ class QuestionsController < ApplicationController
     @question = Question.new(question_params)
     
     if @question.save
-      redirect_to question_url(@question)
+      redirect_to questions_url
     else
       flash.now[:errors] = @question.errors.full_messages
+      render :new
     end
       
   end
@@ -64,6 +58,7 @@ class QuestionsController < ApplicationController
       redirect_to questions_url
     else
       flash.now[:errors] = @question.errors.full_messages
+      render :show
     end
   end
   

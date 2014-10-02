@@ -20,6 +20,15 @@
 	</header>
 	
 	<div class="main">
+		<div class="error-messages">
+			<% if flash[:errors] %>
+			  <ul>
+			    <% flash[:errors].each do |error| %>
+			      <li><p><%= error %></p></li>
+			    <% end %>
+			  </ul>
+			<% end %>
+		</div>
 		<%= yield %>
 	</div>
 
